@@ -14,7 +14,6 @@ class App extends Component {
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSearch = this.handleSearch.bind(this)
-
   }
 
   
@@ -24,6 +23,7 @@ class App extends Component {
 		    method: 'GET',
 		    url: `https://itunes.apple.com/search?term=${this.state.artist}`
 	    }).then(res => {
+		    console.log(res.data.results)
 		    this.setState({results: res.data.results})
 	    })
     }
@@ -38,6 +38,7 @@ class App extends Component {
 		  method: 'GET',
 		  url: `https://itunes.apple.com/search?term=${this.state.artist}`
 	  }).then(res => {
+	  	console.log(res)
 	    this.setState({results: res.data.results})
 	  })
   }
