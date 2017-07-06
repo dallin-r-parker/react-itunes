@@ -9,7 +9,7 @@ class App extends Component {
     super();
 
     this.state = {
-      artist: 'drake',
+      artist: '',
       results: []
     }
     this.handleChange = this.handleChange.bind(this)
@@ -47,14 +47,14 @@ class App extends Component {
       return (
         <Results key={i}
                  style={{width:'100%'}}
-                      play={e.previewUrl}
-                      song={e.trackName}
-                      artist={e.artistName}
-                      collection={e.collectionName}
-                      albumArt={e.artworkUrl60}
-                      type={e.kind}
-                      singlePrice={e.trackPrice}
-                      collectionPrice={e.collectionPrice}/>
+                 play={e.previewUrl}
+                 song={e.trackName}
+                 artist={e.artistName}
+                 collection={e.collectionName}
+                 albumArt={e.artworkUrl60}
+                 type={e.kind}
+                 singlePrice={e.trackPrice}
+                 collectionPrice={e.collectionPrice}/>
       )
     })
     return (
@@ -65,7 +65,21 @@ class App extends Component {
                  onKeyDown={this.handleSearch}
                  value={this.state.artist}/>
         </div>
-        {resultsArr}
+        <table>
+          <tbody>
+          <tr>
+            <th>Play</th>
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Collection</th>
+            <th>Album Art</th>
+            <th>Type</th>
+            <th>Single Price</th>
+            <th>Collection Price</th>
+          </tr>
+            {resultsArr}
+          </tbody>
+        </table>
       </div>
     );
   }
