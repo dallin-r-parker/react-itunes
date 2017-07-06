@@ -1,0 +1,43 @@
+.main-container {
+	height:100vh;
+	background: #BABABA;
+}
+
+.search-container {
+	background: white;
+	height: 20vh;
+	display: flex;
+	align-items:center;
+	justify-content:space-between;
+}
+
+input {
+	width: 35%;
+	margin-right: 50px;
+	height: 3vh;
+	border: none;
+	border-bottom: 3px solid black;
+	font-family:'courier', sans-serif;
+	font-size: 2em;
+	color: #4794FF;
+	padding:3px;
+}
+input:focus{
+	outline: none;
+}
+
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
